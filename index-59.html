@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LoveCode | مواقع إلكترونية بتصميم مخصص لأفكارك</title>
+  <meta name="description" content="LoveCode: بحوّل أفكارك لمواقع إلكترونية مميزة لمناسباتك ومشاريعك، بتصميم يجمع بين الجمال والتفاعل والتفاصيل. شوف ستة مواقع من أعمالي وتواصل معايا.">
+  <meta name="theme-color" content="#FFF9F5">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LoveCode | مواقع إلكترونية بتصميم مخصص لأفكارك">
+  <meta property="og:description" content="أفكارك تستحق موقعًا مميزًا. شوف مشاريعي واطلب موقعك.">
+  <meta property="og:locale" content="ar_EG">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23FFF9F5'/%3E%3Cpath d='M32 50C14 38 11 27 16 20c4-5 12-4 16 3 4-7 12-8 16-3 5 7 2 18-16 30z' fill='%23E85D8E'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+/* ==========================================================
+   LoveCode Portfolio — style.css
+   ========================================================== */
+
+:root {
+  --cream: #FFF9F5;
+  --pink-100: #F7D7E3;
+  --pink-50: #FCEBF1;
+  --pink: #E85D8E;
+  --pink-dark: #C73770;
+  --pink-deep: #A92B5E;
+  --ink: #30252B;
+  --muted: #6D5D65;
+  --white: #FFFFFF;
+  --mauve: #6B2C91;
+  --mauve-bg: #F4E9FB;
+  --line: #EEDCE4;
+
+  --shadow-sm: 0 2px 10px rgba(199, 55, 112, .08);
+  --shadow-md: 0 14px 34px -12px rgba(199, 55, 112, .22);
+  --shadow-lg: 0 24px 50px -18px rgba(199, 55, 112, .3);
+
+  --r-sm: 10px;
+  --r-md: 18px;
+  --r-lg: 28px;
+
+  --header-h: 68px;
+  --font: "Cairo", "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h) + 8px);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  color: var(--ink);
+  background: var(--cream);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { max-width: 100%; display: block; }
+h1, h2, h3, p, ul, ol { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+a { color: inherit; text-decoration: none; }
+button, input, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+
+[tabindex="-1"]:focus { outline: none; }
+
+:focus-visible {
+  outline: 3px solid var(--pink-dark);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.container { width: min(1120px, 100% - 2rem); margin-inline: auto; }
+
+.ic {
+  width: 1.25em; height: 1.25em; flex: none;
+  fill: none; stroke: currentColor; stroke-width: 1.8;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+
+.skip-link {
+  position: absolute; inset-inline-start: 1rem; top: -100px; z-index: 100;
+  background: var(--ink); color: var(--white);
+  padding: .6rem 1rem; border-radius: var(--r-sm);
+}
+.skip-link:focus { top: 1rem; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+  min-height: 48px; padding: .6rem 1.4rem;
+  font-weight: 700; font-size: 1rem; line-height: 1.3;
+  border: 2px solid transparent; border-radius: 999px;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+
+.btn-primary {
+  background: linear-gradient(135deg, #D8467C, var(--pink-dark));
+  color: var(--white);
+  box-shadow: 0 8px 20px -8px rgba(199, 55, 112, .6);
+}
+.btn-primary:hover { box-shadow: 0 12px 24px -8px rgba(199, 55, 112, .7); }
+
+.btn-soft { background: var(--pink-50); color: var(--pink-deep); border-color: var(--pink-100); }
+.btn-soft:hover { background: var(--pink-100); }
+
+.btn-ghost { background: transparent; color: var(--pink-deep); border-color: var(--pink-dark); }
+.btn-ghost:hover { background: var(--pink-50); }
+
+.btn-white { background: var(--white); color: var(--pink-deep); }
+.btn-white:hover { box-shadow: 0 10px 22px -8px rgba(0, 0, 0, .35); }
+
+.btn-outline-light { background: rgba(255, 255, 255, .08); color: var(--white); border-color: rgba(255, 255, 255, .7); }
+.btn-outline-light:hover { background: rgba(255, 255, 255, .2); }
+
+.btn-sm { min-height: 42px; padding: .4rem 1.1rem; font-size: .95rem; }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  height: var(--header-h);
+  background: rgba(255, 249, 245, .9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+.site-header.scrolled { border-bottom-color: var(--line); box-shadow: 0 6px 20px -14px rgba(199, 55, 112, .35); }
+
+.header-row { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+
+.logo { display: inline-flex; align-items: center; gap: .55rem; }
+.logo-mark { width: 44px; height: 30px; }
+.logo-text { font-weight: 900; font-size: 1.4rem; letter-spacing: .2px; line-height: 1; direction: ltr; }
+.logo-text span { color: var(--pink-dark); }
+
+.nav { display: none; }
+.nav a {
+  padding: .45rem .8rem; border-radius: 999px;
+  font-weight: 600; font-size: .98rem; color: var(--ink);
+  transition: background-color .2s ease, color .2s ease;
+}
+.nav a:hover { background: var(--pink-50); color: var(--pink-deep); }
+
+.header-actions { display: flex; align-items: center; gap: .6rem; }
+
+.menu-btn {
+  width: 44px; height: 44px; display: inline-grid; place-items: center;
+  background: var(--white); border: 1px solid var(--line); border-radius: 14px;
+  color: var(--pink-deep);
+}
+.menu-btn .icon-close { display: none; }
+.menu-btn[aria-expanded="true"] .icon-open { display: none; }
+.menu-btn[aria-expanded="true"] .icon-close { display: block; }
+
+@media (max-width: 899px) {
+  .nav {
+    position: absolute; top: 100%; inset-inline: 0;
+    flex-direction: column; gap: .15rem;
+    padding: .75rem 1rem 1.1rem;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 18px 30px -20px rgba(199, 55, 112, .4);
+  }
+  .nav.open { display: flex; }
+  .nav a { padding: .8rem 1rem; font-size: 1.05rem; }
+}
+
+@media (min-width: 900px) {
+  .nav { display: flex; align-items: center; gap: .1rem; }
+  .menu-btn { display: none; }
+}
+
+/* شريط الأقسام ثابت فوق على الموبايل زي الكمبيوتر + إضاءة القسم الحالي */
+.nav a.active {
+  background: var(--pink-50); color: var(--pink-deep);
+  box-shadow: 0 0 0 2px var(--pink-100), 0 0 14px rgba(232, 93, 142, .45);
+}
+@media (max-width: 899px) {
+  :root { --header-h: 100px; }
+  .header-row { flex-wrap: wrap; align-content: center; row-gap: .3rem; }
+  .nav, .nav.open {
+    display: flex; flex-direction: row; flex: 0 0 100%; order: 3;
+    position: static; padding: .1rem 0 .2rem; gap: .15rem;
+    background: none; border: 0; box-shadow: none;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { flex: 0 0 auto; padding: .3rem .6rem; font-size: .82rem; white-space: nowrap; }
+  .menu-btn { display: none; }
+  .logo-mark { width: 38px; height: 26px; }
+  .logo-text { font-size: 1.2rem; }
+}
+html:not(.js) .menu-btn { display: none; }
+html:not(.js) .nav { display: flex; position: static; flex-wrap: wrap; box-shadow: none; border: 0; padding: 0; }
+html:not(.js) .site-header { height: auto; position: static; }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  padding-block: clamp(2rem, 6vw, 4.5rem) clamp(3rem, 7vw, 5.5rem);
+  background:
+    radial-gradient(520px 340px at 88% 12%, rgba(247, 215, 227, .85), transparent 70%),
+    radial-gradient(420px 300px at 6% 92%, rgba(244, 233, 251, .8), transparent 70%);
+}
+
+.hero-grid { display: grid; gap: 2rem; align-items: center; justify-items: center; text-align: center; }
+
+.hero-art { position: relative; width: clamp(190px, 52vw, 330px); aspect-ratio: 1; }
+
+.avatar-wrap {
+  position: relative; width: 100%; height: 100%;
+  border-radius: 50%; overflow: hidden;
+  border: 6px solid var(--white);
+  box-shadow: var(--shadow-lg);
+  background: linear-gradient(135deg, var(--pink-100), var(--mauve-bg));
+  display: grid; place-items: center;
+}
+.avatar-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.avatar-fallback { display: none; font-weight: 900; font-size: 4rem; color: var(--pink-dark); direction: ltr; }
+.avatar-wrap.no-img img { display: none; }
+.avatar-wrap.no-img .avatar-fallback { display: block; }
+
+.hero-art::before {
+  content: ""; position: absolute; inset: -14px; z-index: -1;
+  border: 2px dashed var(--pink); border-radius: 50%; opacity: .55;
+}
+
+.chip {
+  position: absolute; display: grid; place-items: center;
+  background: var(--white); border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  font-weight: 800;
+}
+.chip-code { top: 4%; inset-inline-start: -6%; padding: .3rem .8rem; color: var(--pink-deep); font-size: 1.05rem; direction: ltr; }
+.chip-heart { bottom: 6%; inset-inline-end: -4%; width: 48px; height: 48px; border-radius: 50%; color: var(--pink); font-size: 1.35rem; }
+
+.brand-name {
+  display: inline-block; margin-bottom: .6rem;
+  padding: .15rem .9rem; border-radius: 999px;
+  background: var(--white); border: 1px solid var(--line);
+  font-weight: 800; color: var(--pink-deep); direction: ltr;
+}
+
+.hero h1 {
+  font-size: clamp(2.05rem, 7vw, 3.7rem);
+  font-weight: 900; line-height: 1.3;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.lead { margin-top: 1rem; font-size: clamp(1.1rem, 2.6vw, 1.3rem); font-weight: 600; color: var(--ink); max-width: 36ch; margin-inline: auto; }
+.sub { margin-top: .8rem; color: var(--muted); max-width: 52ch; margin-inline: auto; }
+.hero-cta { margin-top: 1.7rem; display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; }
+
+@media (min-width: 900px) {
+  .hero-grid { grid-template-columns: 1.15fr .85fr; text-align: start; justify-items: stretch; gap: 3rem; }
+  .hero-art { grid-column: 2; grid-row: 1; justify-self: center; width: clamp(260px, 30vw, 360px); }
+  .hero-copy { grid-column: 1; grid-row: 1; }
+  .lead, .sub { margin-inline: 0; }
+  .hero-cta { justify-content: flex-start; }
+}
+
+/* ---------- Sections ---------- */
+.section { padding-block: clamp(3.2rem, 8vw, 5.8rem); }
+.section-tint { background: linear-gradient(180deg, var(--pink-50), #FFF3F7 55%, var(--pink-50)); }
+
+.section-head { margin-bottom: clamp(1.8rem, 4vw, 2.8rem); max-width: 60ch; }
+.section-head h2, .contact-card h2 {
+  font-size: clamp(1.65rem, 4.6vw, 2.5rem);
+  font-weight: 900; line-height: 1.35; color: var(--ink);
+}
+.section-head p { margin-top: .6rem; color: var(--muted); }
+
+.note {
+  margin-top: 1.6rem; padding: .9rem 1.1rem;
+  background: var(--white); border: 1px dashed var(--pink);
+  border-radius: var(--r-md); color: var(--muted); font-size: .98rem;
+}
+
+/* ---------- Projects ---------- */
+.projects-grid { display: grid; gap: 1.4rem; grid-template-columns: 1fr; }
+
+.project {
+  display: flex; flex-direction: column; overflow: hidden;
+  background: var(--white); border: 1px solid var(--line);
+  border-radius: var(--r-lg); box-shadow: var(--shadow-sm);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.project:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--pink-100); }
+
+.project-art {
+  position: relative; height: 150px; display: grid; place-items: center;
+  background: var(--art-bg, var(--pink-100));
+  border-radius: 0 0 40px 0;
+}
+.project-art svg { width: min(260px, 82%); height: 100%; }
+.project-no {
+  position: absolute; top: .9rem; inset-inline-start: .9rem;
+  padding: .1rem .75rem; border-radius: 999px;
+  background: var(--white); color: var(--pink-deep);
+  font-size: .85rem; font-weight: 800;
+}
+
+
+/* صور المشاريع: لو الصورة موجودة تظهر، وإلا يظهر الرسم الافتراضي */
+.project-art { overflow: hidden; }
+.project-no { z-index: 1; }
+.project-shot {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: top center;
+  opacity: 0; pointer-events: none;
+}
+.project-art.has-shot { display: block; height: auto; aspect-ratio: 4 / 3; }
+.project-art.has-shot .project-shot { opacity: 1; }
+.project-art.has-shot > svg { display: none; }
+
+.s1 { fill: #E85D8E; } .s2 { fill: #FFFFFF; } .s3 { fill: #C73770; } .s4 { fill: #F7D7E3; } .s5 { fill: #B58AD9; }
+
+.project-body { display: flex; flex-direction: column; gap: .7rem; padding: 1.25rem 1.3rem 1.4rem; flex: 1; }
+.tag {
+  align-self: flex-start; padding: .05rem .8rem; border-radius: 8px;
+  background: var(--pink-50); color: var(--pink-deep);
+  font-size: .85rem; font-weight: 700;
+}
+.project h3 { font-size: 1.45rem; font-weight: 800; line-height: 1.35; direction: auto; }
+.project-body > p { font-size: .98rem; color: var(--muted); line-height: 1.8; }
+
+.pw {
+  margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: .6rem;
+  padding: .55rem .6rem .55rem .9rem; border-radius: 14px;
+  background: var(--mauve-bg);
+}
+.pw-label { font-size: .9rem; font-weight: 700; color: var(--mauve); }
+.pw-code {
+  padding: .1rem .85rem; border-radius: 10px;
+  background: var(--white); color: var(--mauve);
+  font-weight: 800; font-size: 1.05rem; letter-spacing: .5px;
+  box-shadow: 0 0 0 1px rgba(155, 89, 208, .25), 0 0 16px rgba(155, 89, 208, .38);
+  animation: glow 3.2s ease-in-out infinite;
+}
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 0 1px rgba(155, 89, 208, .25), 0 0 10px rgba(155, 89, 208, .25); }
+  50% { box-shadow: 0 0 0 1px rgba(155, 89, 208, .4), 0 0 20px rgba(155, 89, 208, .5); }
+}
+
+.project-actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+.project-actions .btn { flex: 1 1 150px; padding-inline: 1rem; font-size: .95rem; }
+.copy-btn.done { background: #E7F7EE; color: #176B3A; border-color: #BFE8CF; }
+
+@media (min-width: 640px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .projects-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* ---------- Services ---------- */
+.services-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+.service {
+  display: flex; align-items: flex-start; gap: 1rem;
+  padding: 1.15rem 1.2rem; background: var(--white);
+  border: 1px solid var(--line); border-radius: var(--r-md);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.service:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.service-icon {
+  flex: none; width: 52px; height: 52px; display: grid; place-items: center;
+  border-radius: 16px 16px 16px 6px; background: var(--pink-100); color: var(--pink-deep);
+}
+.service-icon .ic { width: 26px; height: 26px; }
+.service h3 { font-size: 1.12rem; font-weight: 800; line-height: 1.5; }
+.service p { margin-top: .15rem; font-size: .96rem; color: var(--muted); line-height: 1.75; }
+
+@media (min-width: 720px) { .services-grid { grid-template-columns: repeat(2, 1fr); gap: 1.1rem; } }
+
+/* ---------- Why ---------- */
+.why-grid { display: grid; gap: 1.5rem; align-items: start; }
+.why-grid .section-head { margin-bottom: 0; }
+.why-list { display: grid; gap: .8rem; }
+.why-list li {
+  display: flex; align-items: center; gap: .9rem;
+  padding: .9rem 1.1rem; background: var(--white);
+  border-radius: 14px; border-inline-start: 5px solid var(--pink);
+  box-shadow: var(--shadow-sm); font-weight: 600;
+}
+.why-list .ic { width: 30px; height: 30px; padding: 5px; border-radius: 50%; background: var(--pink-100); color: var(--pink-deep); stroke-width: 2.4; }
+
+@media (min-width: 900px) {
+  .why-grid { grid-template-columns: .85fr 1.15fr; gap: 3rem; align-items: center; }
+}
+
+/* ---------- Process ---------- */
+.steps { display: grid; gap: 1.6rem; counter-reset: s; }
+.step { position: relative; display: grid; grid-template-columns: auto 1fr; column-gap: 1.1rem; align-items: start; }
+.step-badge {
+  position: relative; grid-row: span 2;
+  width: 64px; height: 64px; display: grid; place-items: center;
+  border-radius: 50%; background: var(--white); color: var(--pink-deep);
+  border: 2px solid var(--pink-100); box-shadow: var(--shadow-sm);
+}
+.step-badge .ic { width: 26px; height: 26px; }
+.step-n {
+  position: absolute; top: -6px; inset-inline-end: -6px;
+  width: 26px; height: 26px; display: grid; place-items: center;
+  border-radius: 50%; background: var(--pink-dark); color: var(--white);
+  font-size: .85rem; font-weight: 800; line-height: 1;
+}
+.step h3 { font-size: 1.2rem; font-weight: 800; }
+.step p { color: var(--muted); font-size: .98rem; }
+
+/* خط رأسي يربط الخطوات على الموبايل */
+.step:not(:last-child)::after {
+  content: ""; position: absolute; top: 68px; bottom: -1.4rem;
+  inset-inline-start: 31px; width: 2px;
+  background: repeating-linear-gradient(var(--pink) 0 6px, transparent 6px 12px); opacity: .5;
+}
+
+@media (min-width: 860px) {
+  .steps { grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+  .step { grid-template-columns: 1fr; justify-items: center; text-align: center; row-gap: .4rem; }
+  .step-badge { grid-row: auto; margin-bottom: .5rem; }
+  .step:not(:last-child)::after {
+    top: 32px; bottom: auto; height: 2px; width: calc(100% - 64px);
+    inset-inline-start: calc(-50% + 32px);
+    background: repeating-linear-gradient(90deg, var(--pink) 0 6px, transparent 6px 12px);
+  }
+}
+
+/* ---------- Reviews ---------- */
+.reviews-grid { display: grid; gap: 1.1rem; grid-template-columns: 1fr; }
+.review {
+  position: relative; padding: 1.3rem 1.3rem 1.2rem;
+  background: rgba(255, 255, 255, .7);
+  border: 2px dashed var(--pink-100); border-radius: var(--r-md);
+  transition: transform .25s ease, border-color .25s ease;
+}
+.review:hover { transform: translateY(-3px); border-color: var(--pink); }
+.review-head { display: flex; align-items: center; gap: .8rem; margin-bottom: .7rem; }
+.review-head strong { display: block; font-weight: 800; line-height: 1.4; }
+.avatar { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 50%; background: var(--pink-100); color: var(--pink-deep); }
+.stars { display: flex; gap: 2px; color: var(--pink); }
+.stars .ic { width: 15px; height: 15px; stroke-dasharray: 2 2; }
+.review p { color: var(--muted); }
+.review-heart { position: absolute; top: 1rem; inset-inline-end: 1rem; width: 16px; height: 16px; color: var(--pink); }
+.reviews-more { display: flex; justify-content: center; margin-top: 1.6rem; }
+.reviews-more[hidden] { display: none; }
+
+.demo-badge {
+  display: inline-block; margin-bottom: .6rem;
+  padding: .05rem .75rem; border-radius: 8px;
+  background: var(--mauve-bg); color: var(--mauve);
+  font-size: .82rem; font-weight: 800;
+}
+
+@media (min-width: 720px) { .reviews-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* ---------- Feedback form ---------- */
+.feedback {
+  margin-top: 2.4rem; display: grid; gap: 1.6rem;
+  padding: clamp(1.3rem, 4vw, 2.4rem);
+  background: var(--white); border: 1px solid var(--line);
+  border-radius: var(--r-lg); box-shadow: var(--shadow-md);
+}
+.feedback-intro h3 { font-size: clamp(1.35rem, 3.6vw, 1.8rem); font-weight: 900; line-height: 1.4; }
+.feedback-intro p { margin-top: .5rem; color: var(--muted); }
+
+.feedback-form { display: grid; gap: 1.1rem; }
+.field { display: grid; gap: .4rem; }
+.field label { font-weight: 700; }
+.optional { color: var(--muted); font-weight: 400; font-size: .92rem; }
+
+.field input, .field textarea {
+  width: 100%; padding: .8rem 1rem;
+  background: var(--cream); border: 2px solid var(--line); border-radius: 14px;
+  font-size: 1rem; line-height: 1.7;
+  transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.field textarea { resize: vertical; min-height: 130px; }
+.field input:focus, .field textarea:focus {
+  outline: none; border-color: var(--pink-dark); background: var(--white);
+  box-shadow: 0 0 0 4px rgba(232, 93, 142, .18);
+}
+.field input::placeholder, .field textarea::placeholder { color: #9A8A92; }
+.field [aria-invalid="true"] { border-color: #C0264B; background: #FFF5F7; }
+.field-error { color: #B01E43; font-weight: 700; font-size: .95rem; }
+
+.form-actions { display: flex; flex-wrap: wrap; gap: .7rem; }
+.form-actions .btn { flex: 1 1 200px; }
+.form-hint { font-size: .93rem; color: var(--muted); }
+.form-status { font-weight: 700; color: #176B3A; min-height: 0; }
+.form-status:empty { display: none; }
+.form-status.warn { color: #9A5A00; }
+.fallback-link { display: inline-block; font-weight: 800; color: var(--pink-deep); text-decoration: underline; text-underline-offset: 4px; }
+
+.preview {
+  padding: 1rem 1.1rem; background: var(--pink-50);
+  border: 2px dashed var(--pink); border-radius: var(--r-md);
+}
+.preview strong { display: block; }
+.preview p { margin-top: .2rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+.preview small { display: block; margin-top: .5rem; color: var(--muted); }
+
+@media (min-width: 900px) {
+  .feedback { grid-template-columns: .8fr 1.2fr; gap: 3rem; align-items: start; }
+}
+
+/* ---------- FAQ ---------- */
+.faq-wrap { max-width: 820px; }
+.faq { display: grid; gap: .75rem; }
+.faq-item { background: var(--white); border: 1px solid var(--line); border-radius: var(--r-md); transition: border-color .2s ease, box-shadow .2s ease; }
+.faq-item.open { border-color: var(--pink); box-shadow: var(--shadow-sm); }
+.faq-item h3 { font-size: inherit; }
+
+.faq-trigger {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1rem 1.2rem; min-height: 56px;
+  background: transparent; border: 0; border-radius: var(--r-md);
+  text-align: start; font-weight: 700; font-size: 1.05rem; line-height: 1.6;
+}
+.faq-chevron { width: 22px; height: 22px; color: var(--pink-dark); transition: transform .3s ease; }
+.faq-trigger[aria-expanded="true"] .faq-chevron { transform: rotate(180deg); }
+
+.faq-panel p { padding: 0 1.2rem 1.1rem; color: var(--muted); }
+
+.js .faq-panel {
+  display: grid; grid-template-rows: 0fr; visibility: hidden;
+  transition: grid-template-rows .3s ease, visibility .3s;
+}
+.js .faq-panel > div { overflow: hidden; min-height: 0; }
+.js .faq-item.open .faq-panel { grid-template-rows: 1fr; visibility: visible; }
+
+/* ---------- Contact ---------- */
+.contact-card {
+  padding: clamp(1.8rem, 6vw, 3.6rem);
+  background: linear-gradient(135deg, var(--pink-dark), var(--pink-deep));
+  color: var(--white); border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg); text-align: center;
+  position: relative; overflow: hidden;
+}
+.contact-card::before {
+  content: ""; position: absolute; width: 280px; height: 280px; border-radius: 50%;
+  inset-block-start: -120px; inset-inline-start: -90px;
+  background: rgba(255, 255, 255, .08);
+}
+.contact-card > * { position: relative; }
+.contact-card h2 { color: var(--white); }
+.contact-card p { margin: .9rem auto 0; max-width: 54ch; color: rgba(255, 255, 255, .92); }
+.contact-buttons { margin-top: 1.8rem; display: grid; gap: .8rem; grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; }
+
+@media (min-width: 720px) {
+  .contact-buttons { grid-template-columns: repeat(2, 1fr); max-width: 640px; }
+  .contact-buttons .btn-white { grid-column: 1 / -1; }
+}
+
+/* ---------- Footer ---------- */
+.site-footer { padding-block: 2rem 5.5rem; border-top: 1px solid var(--line); }
+.footer-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+.site-footer p { color: var(--muted); font-size: .95rem; }
+
+/* ---------- Floating buttons ---------- */
+.fab {
+  position: fixed; bottom: 1.1rem; z-index: 40;
+  width: 54px; height: 54px; display: grid; place-items: center;
+  border-radius: 50%; border: 0;
+  transition: transform .2s ease, box-shadow .2s ease, opacity .25s ease;
+}
+.fab .ic { width: 26px; height: 26px; }
+.fab:hover { transform: translateY(-3px) scale(1.04); }
+
+.fab-whatsapp {
+  inset-inline-end: 1rem;
+  background: linear-gradient(135deg, #D8467C, var(--pink-dark));
+  color: var(--white); box-shadow: 0 10px 24px -8px rgba(199, 55, 112, .7);
+}
+.fab-top {
+  inset-inline-start: 1rem;
+  background: var(--white); color: var(--pink-deep);
+  border: 2px solid var(--pink-100); box-shadow: var(--shadow-md);
+}
+.fab-top[hidden] { display: none; }
+
+/* ---------- Toast ---------- */
+.toast {
+  position: fixed; inset-inline: 0; bottom: 5.6rem; z-index: 60;
+  width: max-content; max-width: calc(100% - 2rem); margin-inline: auto;
+  padding: .7rem 1.3rem; border-radius: 999px;
+  background: var(--ink); color: var(--white);
+  font-weight: 700; font-size: .98rem; text-align: center;
+  box-shadow: 0 14px 30px -10px rgba(0, 0, 0, .45);
+  opacity: 0; transform: translateY(12px); pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease;
+}
+.toast.show { opacity: 1; transform: translateY(0); }
+
+/* ---------- Reveal on scroll ---------- */
+.js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+.projects-grid .reveal:nth-child(3n+2), .services-grid .reveal:nth-child(2n), .reviews-grid .reveal:nth-child(3n+2) { transition-delay: .07s; }
+.projects-grid .reveal:nth-child(3n), .reviews-grid .reveal:nth-child(3n) { transition-delay: .14s; }
+
+/* ---------- Hero entrance (مرة واحدة عند التحميل) ---------- */
+@keyframes pop-in { from { opacity: 0; transform: scale(.92); } to { opacity: 1; transform: none; } }
+.hero-art { animation: pop-in .7s cubic-bezier(.2, .8, .2, 1) both; }
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width: 380px) {
+  body { font-size: 1rem; }
+  .logo-text { font-size: 1.2rem; }
+  .logo-mark { width: 38px; }
+  .btn-sm { padding-inline: .8rem; font-size: .9rem; }
+  .project-actions .btn { flex-basis: 100%; }
+}
+
+/* ---------- تقسيمة الموبايل: مشروعين جنب بعض + 3 خدمات مربعة (الكمبيوتر والتابلت زي ما هم) ---------- */
+@media (max-width: 639px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); gap: .7rem; }
+  .project { border-radius: var(--r-md); }
+  .project-body { gap: .45rem; padding: .7rem .65rem .8rem; }
+  .tag { font-size: .68rem; padding: .02rem .5rem; }
+  .project h3 { font-size: 1rem; }
+  .project-body > p { font-size: .76rem; line-height: 1.6; }
+  .pw { flex-direction: column; align-items: stretch; gap: .3rem; padding: .4rem; text-align: center; }
+  .pw-label { font-size: .7rem; }
+  .pw-code { padding: .05rem .4rem; font-size: .8rem; letter-spacing: 0; }
+  .project-actions { gap: .4rem; }
+  .project-actions .btn { flex: 1 1 100%; min-height: 38px; padding: .3rem .5rem; font-size: .78rem; }
+
+  .services-grid { grid-template-columns: repeat(3, 1fr); gap: .55rem; }
+  .service {
+    flex-direction: column; align-items: center; justify-content: center;
+    gap: .4rem; aspect-ratio: 1 / 1; padding: .4rem; text-align: center;
+  }
+  .service-icon { width: 34px; height: 34px; border-radius: 11px 11px 11px 4px; }
+  .service-icon .ic { width: 18px; height: 18px; }
+  .service h3 { font-size: .72rem; line-height: 1.4; }
+  .service p { display: none; }
+}
+
+
+/* ==========================================================
+   شاشة الدخول (Intro) — LoveCode
+   ========================================================== */
+#intro { display: none; }
+.js #intro {
+  position: fixed; inset: 0; z-index: 200;
+  display: grid; place-items: center; padding: 1.25rem;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 14%, rgba(247, 215, 227, .95), transparent 52%),
+    radial-gradient(circle at 86% 92%, rgba(244, 233, 251, .85), transparent 48%),
+    linear-gradient(160deg, var(--cream), var(--pink-50) 58%, var(--pink-100));
+  opacity: 1; visibility: visible;
+  transition: opacity .7s ease, visibility .7s ease;
+}
+#intro.leaving { opacity: 0; visibility: hidden; pointer-events: none; }
+
+html.intro-open, html.intro-open body { overflow: hidden; height: 100%; }
+html.intro-open body > :not(#intro):not(script):not(svg):not(audio):not(style) { opacity: 0; }
+html.intro-leaving body > :not(#intro):not(script):not(svg):not(audio):not(style) { animation: site-in .8s ease backwards; }
+@keyframes site-in { from { opacity: 0; } to { opacity: 1; } }
+
+.intro-hearts { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.intro-heart {
+  position: absolute; bottom: -70px; opacity: 0;
+  width: var(--s); height: var(--s);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23E85D8E' d='M12 21s-8-5.2-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.8-8 11-8 11z'/%3E%3C/svg%3E") center / contain no-repeat;
+  animation: intro-float var(--d) linear var(--delay) infinite;
+}
+@keyframes intro-float {
+  0%   { transform: translate3d(0, 0, 0) rotate(-8deg); opacity: 0; }
+  12%  { opacity: .32; }
+  50%  { transform: translate3d(var(--x), -55vh, 0) rotate(10deg); }
+  88%  { opacity: .2; }
+  100% { transform: translate3d(0, -115vh, 0) rotate(-6deg); opacity: 0; }
+}
+
+.intro-card {
+  position: relative; width: min(100%, 460px);
+  padding: 2.4rem 1.6rem 2rem; text-align: center;
+  background: rgba(255, 255, 255, .55);
+  border: 1px solid rgba(255, 255, 255, .85);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255, 255, 255, .9);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  animation: intro-rise .9s cubic-bezier(.2, .8, .2, 1) both;
+}
+.intro-card::before {
+  content: ""; position: absolute; z-index: -1; inset: -18% -10%;
+  background: radial-gradient(closest-side, rgba(232, 93, 142, .28), transparent 72%);
+  filter: blur(18px);
+}
+@keyframes intro-rise { from { opacity: 0; transform: translateY(18px) scale(.98); } to { opacity: 1; transform: none; } }
+
+.intro-logo { display: inline-flex; align-items: center; gap: .55rem; direction: ltr; margin-bottom: 1.3rem; }
+.intro-logo svg { width: 46px; height: auto; }
+.intro-logo span { font-size: 1.6rem; font-weight: 800; letter-spacing: -.01em; color: var(--ink); }
+.intro-logo span b { color: var(--pink); font-weight: 800; }
+
+.intro-title { font-size: clamp(1.6rem, 6.4vw, 2.1rem); font-weight: 900; line-height: 1.4; color: var(--ink); margin-bottom: .7rem; }
+.intro-text { font-size: 1rem; line-height: 1.9; color: var(--muted); margin: 0 auto 1.7rem; max-width: 34ch; }
+
+.intro-btn {
+  position: relative; overflow: hidden;
+  width: 100%; max-width: 320px; min-height: 56px; font-size: 1.1rem;
+}
+.intro-btn:active { transform: scale(.96); }
+.intro-btn .ripple {
+  position: absolute; border-radius: 50%; pointer-events: none;
+  background: rgba(255, 255, 255, .5); transform: scale(0);
+  animation: intro-ripple .6s ease-out forwards;
+}
+@keyframes intro-ripple { to { transform: scale(1); opacity: 0; } }
+
+/* زر تشغيل الموسيقى اليدوي (بيظهر بس لو المتصفح رفض التشغيل) */
+#music-fallback {
+  position: fixed; inset-inline-start: 1rem; bottom: 5.6rem; z-index: 45;
+  display: none; align-items: center; gap: .45rem;
+  min-height: 44px; padding: .3rem 1rem;
+  font-weight: 700; font-size: .92rem; color: var(--pink-deep);
+  background: rgba(255, 255, 255, .92); border: 2px solid var(--pink-100); border-radius: 999px;
+  box-shadow: var(--shadow-md); -webkit-tap-highlight-color: transparent;
+}
+#music-fallback.show { display: inline-flex; }
+#music-fallback:active { transform: scale(.96); }
+
+@media (max-height: 560px) {
+  .intro-card { padding: 1.4rem 1.2rem 1.2rem; }
+  .intro-logo { margin-bottom: .6rem; }
+  .intro-text { margin-bottom: 1rem; }
+}
+</style>
+  <script>document.documentElement.classList.add('js','intro-open');</script>
+</head>
+<body>
+
+<!-- ===== شاشة الدخول ===== -->
+<div id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
+  <div class="intro-hearts" id="intro-hearts" aria-hidden="true"></div>
+  <div class="intro-card">
+    <div class="intro-logo" aria-hidden="true">
+      <svg viewBox="0 0 48 32">
+        <path d="M13 6 3 16l10 10" fill="none" stroke="#C73770" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M35 6l10 10-10 10" fill="none" stroke="#C73770" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M24 25C16 20 14.5 15.5 17 12.6c1.9-2.1 5.2-1.6 7 1.1 1.8-2.7 5.1-3.2 7-1.1 2.5 2.9 1 7.4-7 12.4z" fill="#E85D8E"/>
+      </svg>
+      <span>Love<b>Code</b></span>
+    </div>
+    <p class="intro-title" id="intro-title">كل موقع وراه حكاية ❤️</p>
+    <p class="intro-text">اكتشف مجموعة من المواقع الإبداعية التي تحوّل الأفكار والمشاعر إلى تجارب رقمية مميزة.</p>
+    <button type="button" class="btn btn-primary intro-btn" id="intro-enter">اكتشف أعمالي ✨</button>
+  </div>
+</div>
+
+<!-- أيقونات SVG (Sprite) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24">
+      <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+      <g transform="translate(6.6 6.4) scale(.48)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></g>
+    </symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-telegram" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></symbol>
+    <symbol id="i-cake" viewBox="0 0 24 24"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/><path d="M2 21h20"/><path d="M7 8v3"/><path d="M12 8v3"/><path d="M17 8v3"/><path d="M7 4h.01"/><path d="M12 4h.01"/><path d="M17 4h.01"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></symbol>
+    <symbol id="i-pointer" viewBox="0 0 24 24"><path d="m3 3 7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/><path d="m13 13 6 6"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98"/><path d="m15.41 6.51-6.82 3.98"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"/><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">تخطّى إلى المحتوى</a>
+
+<!-- ===== الهيدر ===== -->
+<header class="site-header" id="top">
+  <div class="container header-row">
+    <a class="logo" href="#home" aria-label="LoveCode - الصفحة الرئيسية">
+      <svg class="logo-mark" viewBox="0 0 48 32" aria-hidden="true">
+        <path d="M13 6 3 16l10 10" fill="none" stroke="#C73770" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M35 6l10 10-10 10" fill="none" stroke="#C73770" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M24 25C16 20 14.5 15.5 17 12.6c1.9-2.1 5.2-1.6 7 1.1 1.8-2.7 5.1-3.2 7-1.1 2.5 2.9 1 7.4-7 12.4z" fill="#E85D8E"/>
+      </svg>
+      <span class="logo-text">Love<span>Code</span></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="التنقل الرئيسي">
+      <a href="#projects">المشاريع</a>
+      <a href="#services">الخدمات</a>
+      <a href="#why">ليه LoveCode</a>
+      <a href="#process">طريقة العمل</a>
+      <a href="#reviews">آراء الناس</a>
+      <a href="#faq">أسئلة شائعة</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-primary btn-sm" href="#contact">تواصل معي</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="فتح القائمة">
+        <svg class="ic icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="ic icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="hero-art">
+        <div class="avatar-wrap">
+          <img src="img.jpg" alt="صورة LoveCode الرسمية" width="340" height="340" data-fallback>
+          <span class="avatar-fallback" aria-hidden="true">LC</span>
+        </div>
+        <span class="chip chip-code" aria-hidden="true">&lt;/&gt;</span>
+        <span class="chip chip-heart" aria-hidden="true">❤</span>
+      </div>
+
+      <div class="hero-copy">
+        <p class="brand-name">LoveCode</p>
+        <h1 id="hero-title">أفكارك تستحق موقعًا مميزًا ❤️</h1>
+        <p class="lead">بحوّل أفكارك لمواقع إلكترونية مميزة، بتصميم يجمع بين الجمال والتفاعل والتفاصيل اللي بتفرق.</p>
+        <p class="sub">سواء عندك مناسبة حابب تخلّد ذكراها، أو فكرة رومانسية عايز تقدمها بطريقة مختلفة، أو مشروع محتاج تعرضه بشكل احترافي، أقدر أساعدك تحوّل فكرتك لموقع إلكتروني بتصميم مناسب ليك.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projects">شوف مشاريعي</a>
+          <a class="btn btn-ghost" href="#contact">اطلب موقعك</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== المشاريع ===== -->
+  <section class="section" id="projects" aria-labelledby="projects-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 id="projects-title">مشاريعي | My Projects</h2>
+        <p>كل فكرة ليها شكلها الخاص، ودي مجموعة من المواقع اللي صممتها بأفكار وتصميمات مختلفة.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project reveal">
+          <div class="project-art" style="--art-bg:#F7D7E3">
+            <span class="project-no">مشروع 1</span>
+            <img class="project-shot" src="project1.jpg" alt="لقطة من موقع Golden Hour Birthday" width="800" height="600" decoding="async">
+            <svg viewBox="0 0 200 120" aria-hidden="true">
+              <rect x="56" y="64" width="88" height="38" rx="10" class="s3"/>
+              <path class="s2" d="M56 76q11 10 22 0t22 0 22 0 22 0v-2a10 10 0 0 0-10-10H66a10 10 0 0 0-10 10z"/>
+              <rect x="97" y="42" width="6" height="22" rx="3" class="s2"/>
+              <path class="s1" d="M100 26c7 8 7 13 0 16-7-3-7-8 0-16z"/>
+              <circle cx="40" cy="40" r="4" class="s1"/><circle cx="164" cy="52" r="5" class="s5"/><circle cx="150" cy="24" r="3" class="s3"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <span class="tag">عيد ميلاد</span>
+            <h3>Golden Hour Birthday</h3>
+            <p>هدية عيد ميلاد بتبدأ ببوابة كلمة سر وعدّاد عمر، وفيها شمعة تطفيها بالضغط المطوّل، وألبوم صور، وكروت أمنيات بتتقلب، وبلالين فيها جمل مستخبية.</p>
+            <div class="pw"><span class="pw-label">كلمة المرور</span><bdi class="pw-code" dir="ltr">love</bdi></div>
+            <div class="project-actions">
+              <button class="btn btn-soft copy-btn" type="button" data-password="love"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg><span>نسخ كلمة المرور</span></button>
+              <a class="btn btn-primary" href="https://youssef20078y-max.github.io/lovecode1/" target="_blank" rel="noopener noreferrer"><span>زيارة الموقع</span><svg class="ic" aria-hidden="true"><use href="#i-external"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-art" style="--art-bg:#F4E9FB">
+            <span class="project-no">مشروع 2</span>
+            <img class="project-shot" src="project2.jpg" alt="لقطة من موقع رسالة اعتذار" width="800" height="600" decoding="async">
+            <svg viewBox="0 0 200 120" aria-hidden="true">
+              <rect x="48" y="30" width="104" height="66" rx="10" class="s2"/>
+              <path d="M48 42l52 36 52-36" fill="none" stroke="#C73770" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="s1" d="M100 86c-10-7-13-12-10-16 2-3 7-3 10 1 3-4 8-4 10-1 3 4 0 9-10 16z"/>
+              <circle cx="34" cy="26" r="4" class="s5"/><circle cx="170" cy="30" r="3" class="s1"/><circle cx="164" cy="98" r="5" class="s4"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <span class="tag">رسالة اعتذار</span>
+            <h3>رسالة اعتذار</h3>
+            <p>رسالة اعتذار على خطوات بكلمة سر: اعتراف بالغلطة، والتزامات بتتضغط واحد واحد، ولحظات مهمة، وسؤال مسامحة مع مكان لكتابة الرد.</p>
+            <div class="pw"><span class="pw-label">كلمة المرور</span><bdi class="pw-code" dir="ltr">love</bdi></div>
+            <div class="project-actions">
+              <button class="btn btn-soft copy-btn" type="button" data-password="love"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg><span>نسخ كلمة المرور</span></button>
+              <a class="btn btn-primary" href="https://youssef20078y-max.github.io/lovecode2/" target="_blank" rel="noopener noreferrer"><span>زيارة الموقع</span><svg class="ic" aria-hidden="true"><use href="#i-external"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-art" style="--art-bg:#FFE6EE">
+            <span class="project-no">مشروع 3</span>
+            <img class="project-shot" src="project3.jpg" alt="لقطة من موقع ليلة فالنتين" width="800" height="600" decoding="async">
+            <svg viewBox="0 0 200 120" aria-hidden="true">
+              <rect x="40" y="34" width="120" height="52" rx="8" class="s2"/>
+              <circle cx="40" cy="60" r="8" style="fill:var(--art-bg)"/><circle cx="160" cy="60" r="8" style="fill:var(--art-bg)"/>
+              <path d="M122 40v40" stroke="#E85D8E" stroke-width="2.5" stroke-dasharray="4 5" stroke-linecap="round"/>
+              <rect x="56" y="48" width="50" height="6" rx="3" class="s3"/><rect x="56" y="62" width="36" height="5" rx="2.5" class="s4"/><rect x="56" y="72" width="26" height="5" rx="2.5" class="s4"/>
+              <path class="s1" d="M141 49l3 6.2 6.8 1-4.9 4.8 1.2 6.8-6.1-3.2-6.1 3.2 1.2-6.8-4.9-4.8 6.8-1z"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <span class="tag">مناسبة رومانسية</span>
+            <h3>ليلة فالنتين</h3>
+            <p>فالنتين على شكل عرض سينمائي: تذكرة دخول بكلمة سر، وأفيش، وشريط مشاهد، وطاقم العمل، وتريلر وعدّاد تنازلي، وسؤال في النهاية.</p>
+            <div class="pw"><span class="pw-label">كلمة المرور</span><bdi class="pw-code" dir="ltr">love</bdi></div>
+            <div class="project-actions">
+              <button class="btn btn-soft copy-btn" type="button" data-password="love"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg><span>نسخ كلمة المرور</span></button>
+              <a class="btn btn-primary" href="https://youssef20078y-max.github.io/lovecode3/" target="_blank" rel="noopener noreferrer"><span>زيارة الموقع</span><svg class="ic" aria-hidden="true"><use href="#i-external"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-art" style="--art-bg:#FFEFE6">
+            <span class="project-no">مشروع 4</span>
+            <img class="project-shot" src="project4.jpg" alt="لقطة من موقع ألبوم الذكريات" width="800" height="600" decoding="async">
+            <svg viewBox="0 0 200 120" aria-hidden="true">
+              <g transform="rotate(-9 68 62)"><rect x="40" y="34" width="56" height="56" rx="6" class="s2"/><rect x="46" y="40" width="44" height="36" rx="3" class="s4"/></g>
+              <g transform="rotate(8 132 60)"><rect x="104" y="30" width="56" height="56" rx="6" class="s2"/><rect x="110" y="36" width="44" height="36" rx="3" class="s1"/></g>
+              <rect x="72" y="40" width="56" height="62" rx="6" class="s2"/><rect x="78" y="46" width="44" height="42" rx="3" class="s3"/>
+              <circle cx="92" cy="60" r="5" class="s4"/><path class="s1" d="M78 88l16-16 10 10 6-6 12 12z"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <span class="tag">ألبوم ذكريات</span>
+            <h3>ألبوم الذكريات</h3>
+            <p>صفحة رومانسية بكلمة سر فيها ألبوم صور بجمل قصيرة، وقسم فيديوهات، وأغاني مخصصة، ورسالة ختامية.</p>
+            <div class="pw"><span class="pw-label">كلمة المرور</span><bdi class="pw-code" dir="ltr">love</bdi></div>
+            <div class="project-actions">
+              <button class="btn btn-soft copy-btn" type="button" data-password="love"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg><span>نسخ كلمة المرور</span></button>
+              <a class="btn btn-primary" href="https://youssef20078y-max.github.io/lovecode4/" target="_blank" rel="noopener noreferrer"><span>زيارة الموقع</span><svg class="ic" aria-hidden="true"><use href="#i-external"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-art" style="--art-bg:#EFE6FA">
+            <span class="project-no">مشروع 5</span>
+            <img class="project-shot" src="project5.jpg" alt="لقطة من موقع A Love Story" width="800" height="600" decoding="async">
+            <svg viewBox="0 0 200 120" aria-hidden="true">
+              <path class="s1" d="M100 100C70 80 58 62 66 48c6-10 22-10 34 4 12-14 28-14 34-4 8 14-4 32-34 52z"/>
+              <path class="s3" transform="translate(122 6) scale(.42)" d="M100 100C70 80 58 62 66 48c6-10 22-10 34 4 12-14 28-14 34-4 8 14-4 32-34 52z"/>
+              <circle cx="40" cy="34" r="4" class="s5"/><circle cx="48" cy="96" r="3" class="s3"/><circle cx="162" cy="92" r="5" class="s4"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <span class="tag">قصة حب</span>
+            <h3>A Love Story</h3>
+            <p>قصة حب تفاعلية: عدّاد للأيام اللي عدّت، وصور وأغاني، ورسالة حب، ولعبة من 10 أسئلة عن صاحب الهدية، وقلب بتضغط عليه.</p>
+            <div class="pw"><span class="pw-label">كلمة المرور</span><bdi class="pw-code" dir="ltr">love</bdi></div>
+            <div class="project-actions">
+              <button class="btn btn-soft copy-btn" type="button" data-password="love"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg><span>نسخ كلمة المرور</span></button>
+              <a class="btn btn-primary" href="https://youssef20078y-max.github.io/lovecode5/" target="_blank" rel="noopener noreferrer"><span>زيارة الموقع</span><svg class="ic" aria-hidden="true"><use href="#i-external"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-art" style="--art-bg:#FBE3EC">
+            <span class="project-no">مشروع 6</span>
+            <img class="project-shot" src="project6.jpg" alt="لقطة من موقع Birthday Story" width="800" height="600" decoding="async">
+            <svg viewBox="0 0 200 120" aria-hidden="true">
+              <rect x="62" y="60" width="76" height="44" rx="6" class="s3"/>
+              <rect x="56" y="48" width="88" height="18" rx="5" class="s1"/>
+              <rect x="94" y="48" width="12" height="56" class="s2"/>
+              <path class="s2" d="M100 48c-6-16-24-16-22-6s16 8 22 6zM100 48c6-16 24-16 22-6s-16 8-22 6z"/>
+              <circle cx="36" cy="40" r="4" class="s5"/><circle cx="166" cy="34" r="4" class="s1"/><circle cx="160" cy="96" r="3" class="s3"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <span class="tag">عيد ميلاد تفاعلي</span>
+            <h3>Birthday Story</h3>
+            <p>عيد ميلاد على هيئة قصة من شاشات متتالية: رقم سري على شكل تاريخ، وعدّادات، وتايم لاين، وظروف رسائل، و100 سبب، ونموذج لرد الحب.</p>
+            <div class="pw"><span class="pw-label">كلمة المرور</span><bdi class="pw-code" dir="ltr">1/1/2000</bdi></div>
+            <div class="project-actions">
+              <button class="btn btn-soft copy-btn" type="button" data-password="1/1/2000"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg><span>نسخ كلمة المرور</span></button>
+              <a class="btn btn-primary" href="https://youssef20078y-max.github.io/lovecode6/" target="_blank" rel="noopener noreferrer"><span>زيارة الموقع</span><svg class="ic" aria-hidden="true"><use href="#i-external"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== الخدمات ===== -->
+  <section class="section section-tint" id="services" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 id="services-title">أقدر أعملك إيه؟</h2>
+        <p>عندك فكرة؟ خلينا نحولها لموقع إلكتروني يعبر عنها.</p>
+      </div>
+
+      <ul class="services-grid">
+        <li class="service reveal"><span class="service-icon"><svg class="ic" aria-hidden="true"><use href="#i-cake"/></svg></span><div><h3>مواقع أعياد الميلاد</h3><p>صفحات للمناسبات تحتوي على رسائل وصور وتفاصيل مخصصة.</p></div></li>
+        <li class="service reveal"><span class="service-icon"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></span><div><h3>المواقع الرومانسية</h3><p>مواقع شخصية برسائل وتأثيرات بصرية وتصميمات عاطفية.</p></div></li>
+        <li class="service reveal"><span class="service-icon"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span><div><h3>مواقع المصالحة والرسائل</h3><p>تقديم رسالة اعتذار أو التعبير عن المشاعر بطريقة مختلفة.</p></div></li>
+        <li class="service reveal"><span class="service-icon"><svg class="ic" aria-hidden="true"><use href="#i-briefcase"/></svg></span><div><h3>Portfolio شخصي</h3><p>عرض المهارات والمشاريع بصورة احترافية.</p></div></li>
+        <li class="service reveal"><span class="service-icon"><svg class="ic" aria-hidden="true"><use href="#i-layout"/></svg></span><div><h3>Landing Pages</h3><p>صفحات تسويقية للتعريف بمنتج أو خدمة أو مشروع.</p></div></li>
+        <li class="service reveal"><span class="service-icon"><svg class="ic" aria-hidden="true"><use href="#i-pointer"/></svg></span><div><h3>مواقع تفاعلية</h3><p>أزرار وحركات وانتقالات وعناصر تفاعلية مخصصة.</p></div></li>
+        <li class="service reveal"><span class="service-icon"><svg class="ic" aria-hidden="true"><use href="#i-image"/></svg></span><div><h3>إضافة الوسائط</h3><p>الصور والأغاني والفيديوهات، مع مراعاة حقوق الاستخدام.</p></div></li>
+        <li class="service reveal"><span class="service-icon"><svg class="ic" aria-hidden="true"><use href="#i-share"/></svg></span><div><h3>ربط وسائل التواصل</h3><p>روابط وأزرار واتساب والبريد الإلكتروني والمنصات الاجتماعية.</p></div></li>
+        <li class="service reveal"><span class="service-icon"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><div><h3>Responsive Design</h3><p>تصميم يناسب الموبايل والتابلت والكمبيوتر.</p></div></li>
+        <li class="service reveal"><span class="service-icon"><svg class="ic" aria-hidden="true"><use href="#i-palette"/></svg></span><div><h3>تخصيص التصميم</h3><p>اختيار الألوان والخطوط والمحتوى حسب فكرة العميل.</p></div></li>
+      </ul>
+
+      <p class="note">ملحوظة: المواقع بتتبني بتقنيات الويب الأساسية (HTML وCSS وJavaScript). أي خاصية محتاجة تخزين بيانات أو إرسال تلقائي أو دفع إلكتروني بتحتاج خدمة خارجية، وبنتفق عليها قبل التنفيذ.</p>
+    </div>
+  </section>
+
+  <!-- ===== ليه LoveCode ===== -->
+  <section class="section" id="why" aria-labelledby="why-title">
+    <div class="container why-grid">
+      <div class="section-head reveal">
+        <h2 id="why-title">ليه تختار LoveCode؟</h2>
+        <p>مش قالب جاهز بنغيّر فيه الاسم. كل موقع بيتبني على فكرتك أنت.</p>
+      </div>
+      <ul class="why-list reveal">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>تصميم مخصص لكل فكرة.</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>اهتمام بالتفاصيل والألوان وتجربة المستخدم UI/UX.</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>دعم أحجام الشاشات المختلفة.</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>إمكانية تخصيص المحتوى والوسائط.</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>التواصل لمناقشة تفاصيل المشروع قبل البدء.</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>تطوير التصميم وفقًا لاحتياجات العميل وإمكانيات التنفيذ.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== طريقة العمل ===== -->
+  <section class="section section-tint" id="process" aria-labelledby="process-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 id="process-title">هنبدأ إزاي؟</h2>
+        <p>أربع خطوات بسيطة من أول رسالة لحد التسليم.</p>
+      </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-badge"><span class="step-n">1</span><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg></span>
+          <h3>احكيلي فكرتك</h3>
+          <p>وضّح نوع الموقع والمناسبة أو المشروع.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-badge"><span class="step-n">2</span><svg class="ic" aria-hidden="true"><use href="#i-palette"/></svg></span>
+          <h3>نحدد التفاصيل</h3>
+          <p>نتفق على الشكل والألوان والمحتوى والخصائص المطلوبة.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-badge"><span class="step-n">3</span><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg></span>
+          <h3>نبدأ التنفيذ</h3>
+          <p>يتم بناء التصميم والوظائف المتفق عليها.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-badge"><span class="step-n">4</span><svg class="ic" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <h3>المراجعة والتسليم</h3>
+          <p>تراجع النتيجة وتناقش التعديلات المتفق عليها.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== آراء الناس ===== -->
+  <section class="section" id="reviews" aria-labelledby="reviews-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 id="reviews-title">آراء الناس في LoveCode ❤️</h2>
+        <p>رأيك بيفرق معايا، وبيساعدني أطور شغلي وأقدم تجربة أفضل لكل شخص بيتعامل مع LoveCode.</p>
+      </div>
+
+      <!-- بطاقات تجريبية: احذفها أو استبدلها بآراء حقيقية بعد موافقة أصحابها -->
+      <div class="reviews-grid" id="reviews-grid"></div>
+      <div class="reviews-more" id="reviews-more">
+        <button class="btn btn-soft" type="button" id="reviews-more-btn" aria-controls="reviews-grid">عرض المزيد</button>
+      </div>
+
+      <div class="feedback reveal">
+        <div class="feedback-intro">
+          <h3>إيه رأيك في LoveCode؟</h3>
+          <p>يسعدني أسمع رأيك أو اقتراحك، سواء في تصميم المواقع أو تجربة استخدام البورتفوليو.</p>
+        </div>
+
+        <form class="feedback-form" id="feedback-form" novalidate>
+          <div class="field">
+            <label for="fb-name">الاسم <span class="optional">(اختياري)</span></label>
+            <input type="text" id="fb-name" name="name" maxlength="40" autocomplete="off" placeholder="اسمك">
+          </div>
+          <div class="field">
+            <label for="fb-review">رأيك</label>
+            <textarea id="fb-review" name="review" rows="5" maxlength="800" required aria-describedby="fb-error" placeholder="اكتب رأيك أو اقتراحك هنا"></textarea>
+            <p class="field-error" id="fb-error" role="alert" hidden></p>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">إرسال رأيي إلى LoveCode</button>
+            <button class="btn btn-soft" type="button" id="preview-btn">معاينة قبل الإرسال</button>
+          </div>
+          <p class="form-hint">هيتفتح واتساب برسالتك جاهزة، وإنت اللي بتضغط «إرسال» جوه واتساب عشان توصلني فعلًا.</p>
+          <p class="form-status" id="fb-status" role="status" aria-live="polite"></p>
+          <a class="fallback-link" id="fb-fallback" href="#" target="_blank" rel="noopener noreferrer" hidden>اضغط هنا لفتح واتساب برسالتك</a>
+
+          <div class="preview" id="preview" hidden>
+            <span class="demo-badge">معاينة على جهازك فقط</span>
+            <strong id="preview-name"></strong>
+            <p id="preview-text"></p>
+            <small>الرأي ده مش منشور ولا محفوظ في الموقع.</small>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section section-tint" id="faq" aria-labelledby="faq-title">
+    <div class="container faq-wrap">
+      <div class="section-head reveal">
+        <h2 id="faq-title">أسئلة بتتكرر</h2>
+      </div>
+
+      <div class="faq" id="faq-list">
+        <div class="faq-item">
+          <h3><button class="faq-trigger" type="button" id="q1" aria-expanded="false" aria-controls="a1"><span>هل أقدر أطلب موقع بفكرة خاصة؟</span><svg class="ic faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+          <div class="faq-panel" id="a1" role="region" aria-labelledby="q1"><div><p>أيوه، ابعتلي فكرتك وتفاصيلها، ونحدد التصميم والخصائص المناسبة ليها.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3><button class="faq-trigger" type="button" id="q2" aria-expanded="false" aria-controls="a2"><span>هل ممكن أضيف صور وأغاني وفيديوهات؟</span><svg class="ic faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+          <div class="faq-panel" id="a2" role="region" aria-labelledby="q2"><div><p>أيوه، يمكن إضافة الوسائط المناسبة مع مراعاة حجم الملفات وحقوق استخدامها.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3><button class="faq-trigger" type="button" id="q3" aria-expanded="false" aria-controls="a3"><span>هل المواقع بتشتغل على الموبايل؟</span><svg class="ic faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+          <div class="faq-panel" id="a3" role="region" aria-labelledby="q3"><div><p>يتم تصميم المواقع لتكون Responsive ومتوافقة مع أحجام الشاشات المختلفة.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3><button class="faq-trigger" type="button" id="q4" aria-expanded="false" aria-controls="a4"><span>هل ممكن أربط الموقع بواتساب؟</span><svg class="ic faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+          <div class="faq-panel" id="a4" role="region" aria-labelledby="q4"><div><p>أيوه، يمكن إضافة زر يفتح محادثة واتساب برسالة جاهزة.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3><button class="faq-trigger" type="button" id="q5" aria-expanded="false" aria-controls="a5"><span>هل ممكن أربط الموقع بالإيميل؟</span><svg class="ic faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+          <div class="faq-panel" id="a5" role="region" aria-labelledby="q5"><div><p>يمكن إضافة رابط بريد إلكتروني أو نموذج مناسب. أما الإرسال الآلي أو تخزين البيانات فيحتاج إلى خدمة خارجية حسب الوظيفة المطلوبة.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3><button class="faq-trigger" type="button" id="q6" aria-expanded="false" aria-controls="a6"><span>هل كل المواقع لها نفس التصميم؟</span><svg class="ic faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+          <div class="faq-panel" id="a6" role="region" aria-labelledby="q6"><div><p>لا، يتم تخصيص الشكل والألوان والتفاصيل حسب فكرة كل مشروع.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3><button class="faq-trigger" type="button" id="q7" aria-expanded="false" aria-controls="a7"><span>إزاي أعرف السعر؟</span><svg class="ic faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+          <div class="faq-panel" id="a7" role="region" aria-labelledby="q7"><div><p>تقدر تتواصل معي وتشرح فكرتك، ونحدد الخصائص المطلوبة والتكلفة المناسبة.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3><button class="faq-trigger" type="button" id="q8" aria-expanded="false" aria-controls="a8"><span>إزاي أضيف رأيي في الموقع؟</span><svg class="ic faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+          <div class="faq-panel" id="a8" role="region" aria-labelledby="q8"><div><p>اكتب رأيك في نموذج «أضف رأيك»، واضغط على «إرسال رأيي إلى LoveCode». هتفتح محادثة واتساب برسالتك جاهزة، وتقدر تبعتها لي مباشرة.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== التواصل ===== -->
+  <section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="contact-card reveal">
+        <h2 id="contact-title">عندك فكرة؟ خلينا ننفذها سوا ❤️</h2>
+        <p>ابعتلي فكرتك، سواء كانت موقعًا لمناسبة خاصة أو Portfolio أو صفحة تسويقية، ونتكلم عن التفاصيل والإمكانيات المناسبة ليها.</p>
+        <div class="contact-buttons">
+          <a class="btn btn-white" id="contact-whatsapp" href="https://wa.me/201108235028?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A7%D8%B9%D8%B1%D9%81%20%D8%A7%D9%8A%20%D8%B9%D8%B1%D9%88%D8%B6%20website%20%D8%A7%D9%84%D9%8A%20%D9%85%D8%AA%D8%A7%D8%AD%D9%87" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg><span>تواصل معي على واتساب</span></a>
+          <a class="btn btn-outline-light" href="https://vm.tiktok.com/ZS9Dc2ghWJfFY-FHFcF/" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#i-tiktok"/></svg><span>تابعني على TikTok</span></a>
+          <a class="btn btn-outline-light" href="https://www.instagram.com/lovecode2022?xtok=MWp3a3gxMTB5MTR5Yg==" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#i-instagram"/></svg><span>تابعني على Instagram</span></a>
+          <a class="btn btn-outline-light" id="telegram-link" href="#contact"><svg class="ic" aria-hidden="true"><use href="#i-telegram"/></svg><span>تواصل معي على Telegram</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <a class="logo" href="#home" aria-label="LoveCode - أعلى الصفحة">
+      <svg class="logo-mark" viewBox="0 0 48 32" aria-hidden="true">
+        <path d="M13 6 3 16l10 10" fill="none" stroke="#C73770" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M35 6l10 10-10 10" fill="none" stroke="#C73770" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M24 25C16 20 14.5 15.5 17 12.6c1.9-2.1 5.2-1.6 7 1.1 1.8-2.7 5.1-3.2 7-1.1 2.5 2.9 1 7.4-7 12.4z" fill="#E85D8E"/>
+      </svg>
+      <span class="logo-text">Love<span>Code</span></span>
+    </a>
+    <p>© <span id="year">2026</span> LoveCode. صُنع بحب وكود.</p>
+  </div>
+</footer>
+
+<!-- زر واتساب العائم -->
+<a class="fab fab-whatsapp" id="fab-whatsapp" href="https://wa.me/201108235028?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A7%D8%B9%D8%B1%D9%81%20%D8%A7%D9%8A%20%D8%B9%D8%B1%D9%88%D8%B6%20website%20%D8%A7%D9%84%D9%8A%20%D9%85%D8%AA%D8%A7%D8%AD%D9%87" target="_blank" rel="noopener noreferrer" aria-label="تواصل معي على واتساب (يفتح في تبويب جديد)">
+  <svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+</a>
+
+<!-- زر العودة للأعلى -->
+<button class="fab fab-top" id="to-top" type="button" aria-label="العودة إلى أعلى الصفحة" hidden>
+  <svg class="ic" aria-hidden="true"><use href="#i-arrow-up"/></svg>
+</button>
+
+<!-- رسائل صغيرة -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ==========================================================
+   LoveCode Portfolio — script.js (Vanilla JS)
+   ========================================================== */
+(() => {
+  'use strict';
+
+  /* ---------- إعدادات يسهل تعديلها ---------- */
+  const WHATSAPP_PHONE = '201108235028';
+  // ضع هنا رابط تيليجرام العام (مثال: https://t.me/username) وسيعمل الزر تلقائيًا.
+  const TELEGRAM_URL = 'https://t.me/youssefibrah';
+
+  const $ = (sel, ctx = document) => ctx.querySelector(sel);
+  const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- رسائل صغيرة (Toast) ---------- */
+  const toastEl = $('#toast');
+  let toastTimer;
+  function showToast(message) {
+    if (!toastEl) return;
+    toastEl.textContent = message;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2400);
+  }
+
+  /* ---------- صورة LoveCode: بديل لو الملف غير موجود ---------- */
+  $$('img[data-fallback]').forEach((img) => {
+    const wrap = img.closest('.avatar-wrap');
+    const markMissing = () => wrap && wrap.classList.add('no-img');
+    img.addEventListener('error', markMissing);
+    if (img.complete && img.naturalWidth === 0) markMissing();
+  });
+
+  /* ---------- قائمة الموبايل ---------- */
+  const nav = $('#nav');
+  const menuBtn = $('.menu-btn');
+
+  function setMenu(open) {
+    if (!nav || !menuBtn) return;
+    nav.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'إغلاق القائمة' : 'فتح القائمة');
+  }
+
+  if (menuBtn) {
+    menuBtn.addEventListener('click', () => setMenu(menuBtn.getAttribute('aria-expanded') !== 'true'));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('open')) {
+        setMenu(false);
+        menuBtn.focus();
+      }
+    });
+    document.addEventListener('click', (e) => {
+      if (nav.classList.contains('open') && !nav.contains(e.target) && !menuBtn.contains(e.target)) setMenu(false);
+    });
+    window.matchMedia('(min-width: 900px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
+  }
+
+  /* ---------- Smooth scrolling للروابط الداخلية ---------- */
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+    const hash = link.getAttribute('href');
+    if (hash.length < 2) return;
+    const target = document.getElementById(hash.slice(1));
+    if (!target) return;
+    e.preventDefault();
+    setMenu(false);
+    target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    history.pushState(null, '', hash);
+    target.setAttribute('tabindex', '-1');
+    target.focus({ preventScroll: true });
+  });
+
+  /* ---------- الهيدر وزر العودة للأعلى ---------- */
+  const header = $('.site-header');
+  const toTop = $('#to-top');
+  let ticking = false;
+
+  function onScroll() {
+    const y = window.scrollY;
+    if (header) header.classList.toggle('scrolled', y > 8);
+    if (toTop) toTop.hidden = y < 700;
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
+  }, { passive: true });
+  onScroll();
+
+  if (toTop) {
+    toTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+      const home = $('#home');
+      if (home) { home.setAttribute('tabindex', '-1'); home.focus({ preventScroll: true }); }
+    });
+  }
+
+  /* ---------- إضاءة رابط القسم الحالي في الشريط ---------- */
+  const spyLinks = $$('.nav a[href^="#"]');
+  const spyItems = spyLinks
+    .map((a) => ({ a, sec: document.getElementById(a.getAttribute('href').slice(1)) }))
+    .filter((x) => x.sec);
+  let spyTicking = false;
+
+  function updateSpy() {
+    spyTicking = false;
+    const line = (header ? header.offsetHeight : 0) + 40;
+    let current = null;
+    spyItems.forEach((x) => { if (x.sec.getBoundingClientRect().top <= line) current = x; });
+    spyItems.forEach((x) => {
+      const on = x === current;
+      x.a.classList.toggle('active', on);
+      if (on) x.a.setAttribute('aria-current', 'true'); else x.a.removeAttribute('aria-current');
+    });
+    if (current && nav && nav.scrollWidth > nav.clientWidth) {
+      const l = current.a.getBoundingClientRect();
+      const n = nav.getBoundingClientRect();
+      nav.scrollTo({ left: nav.scrollLeft + (l.left - n.left) - (n.width - l.width) / 2, behavior: 'auto' });
+    }
+  }
+  window.addEventListener('scroll', () => {
+    if (!spyTicking) { requestAnimationFrame(updateSpy); spyTicking = true; }
+  }, { passive: true });
+  window.addEventListener('resize', updateSpy);
+  updateSpy();
+
+  /* ---------- بطاقات الآراء (عدّل البيانات من المصفوفة دي) ---------- */
+  const REVIEWS = [
+    { name: 'مريم أحمد', text: 'بجد فكرة الموقع تحفة 😭❤️ التفاصيل كلها جميلة وحسيت إن الموقع معمول مخصوص ليا مش مجرد صفحة عادية.' },
+    { name: 'عمر خالد', text: 'التصميم طلع أحلى بكتير من اللي كنت متخيله 🔥 الألوان متناسقة والحركات بسيطة وجذابة.' },
+    { name: 'سارة محمد', text: 'أكتر حاجة عجبتني إن كل تفصيلة ليها معنى، الموقع كله لطيف وبيوصل الإحساس بطريقة مختلفة 🥹💕' },
+    { name: 'يوسف علي', text: 'شغل نضيف جدًا والواجهة منظمة، خصوصًا على الموبايل. واضح إن فيه اهتمام بالتفاصيل.' },
+    { name: 'نورهان محمود', text: 'فكرة إنك تجمع الصور والرسائل والمزيكا في موقع واحد جميلة أوي 😍❤️' },
+    { name: 'آدم مصطفى', text: 'كنت فاكر إن المواقع الرومانسية كلها شبه بعض، بس الأفكار دي مختلفة وفيها لمسة شخصية.' },
+    { name: 'ملك إبراهيم', text: 'ألوان هادية وشكل مريح للعين، وكل جزء في الموقع مكمل التاني بشكل جميل 🎀' },
+    { name: 'زياد أحمد', text: 'أحلى حاجة إن الموقع مش مجرد صور وخلاص، فيه تفاعل وتفاصيل بتخلي التجربة ممتعة 🔥' },
+    { name: 'جنى محمد', text: 'موقع عيد الميلاد فكرته مميزة جدًا، ينفع هدية مختلفة تفضل ذكرى جميلة ❤️🎂' },
+    { name: 'كريم حسن', text: 'التصميم بسيط وأنيق ومش متكدس، وده أكتر شيء بحبه في أي موقع.' },
+    { name: 'ليلى سامح', text: 'طريقة عرض الرسائل والصور جميلة جدًا، والفكرة كلها مناسبة للمفاجآت الشخصية 🫶🏻' },
+    { name: 'مروان أشرف', text: 'واجهة احترافية فعلًا، والأزرار واضحة وسهلة الاستخدام حتى من الموبايل.' },
+    { name: 'فرح أحمد', text: 'فكرة المصالحة عن طريق موقع شخصي مختلفة ولطيفة، وممكن تخلي الرسالة ليها معنى أكبر 💗' },
+    { name: 'حبيبة علي', text: 'التفاصيل الوردية مع التصميم الكريمي لايقة جدًا على LoveCode، والهوية شكلها مميز.' },
+    { name: 'أحمد شريف', text: 'عجبني إن كل مشروع ليه فكرة وطابع مختلف، مش مجرد تغيير ألوان في نفس القالب.' },
+    { name: 'رنا خالد', text: 'الموقع خلاني أفكر في أفكار هدايا جديدة بدل الهدايا التقليدية 😍🎁' },
+    { name: 'مصطفى محمد', text: 'التصميم مرتب وسريع في التصفح، وطريقة عرض المشاريع بتوضح فكرة كل موقع.' },
+    { name: 'تاليا يوسف', text: 'أكتر حاجة حبيتها هي اللمسات الصغيرة والأنيميشن الهادئ، مفيش حاجة مبالغ فيها ✨' },
+    { name: 'عبدالله محمود', text: 'فكرة حلوة جدًا لأي حد عايز يعمل موقع خاص بمناسبة أو يعرض شغله بشكل مختلف.' },
+    { name: 'ملك أحمد', text: 'LoveCode عنده أفكار لطيفة ومختلفة، ومتحمسة أشوف المشاريع الجديدة اللي هتنزل بعد كده ❤️🔥' }
+  ];
+  const REVIEWS_FIRST = 6; // عدد الآراء الظاهرة في البداية
+  const REVIEWS_STEP = 6;  // عدد الآراء اللي بتظهر مع كل ضغطة على "عرض المزيد"
+
+  const reviewsGrid = $('#reviews-grid');
+  const reviewsMore = $('#reviews-more');
+  const reviewsMoreBtn = $('#reviews-more-btn');
+  if (reviewsGrid) {
+    const SVG_NS = 'http://www.w3.org/2000/svg';
+    let shown = 0;
+
+    function buildReview({ name, text }) {
+      const card = document.createElement('article');
+      card.className = 'review reveal';
+
+      const heart = document.createElementNS(SVG_NS, 'svg');
+      heart.setAttribute('class', 'ic review-heart');
+      heart.setAttribute('aria-hidden', 'true');
+      const use = document.createElementNS(SVG_NS, 'use');
+      use.setAttribute('href', '#i-heart');
+      heart.appendChild(use);
+
+      const head = document.createElement('div');
+      head.className = 'review-head';
+      const avatar = document.createElement('span');
+      avatar.className = 'avatar';
+      avatar.setAttribute('aria-hidden', 'true');
+      avatar.textContent = (name || '').trim().charAt(0);
+      const who = document.createElement('div');
+      const strong = document.createElement('strong');
+      strong.textContent = name;
+      who.appendChild(strong);
+      head.append(avatar, who);
+
+      const p = document.createElement('p');
+      p.textContent = text;
+
+      card.append(heart, head, p);
+      return card;
+    }
+
+    function showMoreReviews(count) {
+      const frag = document.createDocumentFragment();
+      REVIEWS.slice(shown, shown + count).forEach((r) => frag.appendChild(buildReview(r)));
+      const first = frag.firstElementChild;
+      reviewsGrid.appendChild(frag);
+      shown = Math.min(shown + count, REVIEWS.length);
+      if (reviewsMore) reviewsMore.hidden = shown >= REVIEWS.length;
+      return first;
+    }
+
+    showMoreReviews(REVIEWS_FIRST);
+    if (reviewsMoreBtn) {
+      reviewsMoreBtn.addEventListener('click', () => {
+        const before = reviewsGrid.children.length;
+        const first = showMoreReviews(REVIEWS_STEP);
+        const added = Array.from(reviewsGrid.children).slice(before);
+        requestAnimationFrame(() => added.forEach((el) => el.classList.add('in')));
+        if (first) { first.setAttribute('tabindex', '-1'); first.focus({ preventScroll: true }); }
+      });
+    }
+  }
+
+  /* ---------- ظهور تدريجي أثناء التمرير ---------- */
+  const revealEls = $$('.reveal');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach((el) => io.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add('in'));
+  }
+
+  /* ---------- نسخ كلمة المرور ---------- */
+  async function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch (_) { /* نكمل للحل البديل */ }
+    }
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.cssText = 'position:fixed;top:0;inset-inline-start:0;opacity:0;';
+    document.body.appendChild(ta);
+    ta.select();
+    ta.setSelectionRange(0, text.length);
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (_) { ok = false; }
+    ta.remove();
+    return ok;
+  }
+
+  $$('.copy-btn').forEach((btn) => {
+    const label = $('span', btn);
+    const original = label ? label.textContent : '';
+    let resetTimer;
+
+    btn.addEventListener('click', async (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const password = btn.dataset.password || '';
+      const ok = await copyText(password);
+      if (ok) {
+        showToast('تم نسخ كلمة المرور ✓');
+        btn.classList.add('done');
+        if (label) label.textContent = 'تم النسخ ✓';
+        clearTimeout(resetTimer);
+        resetTimer = setTimeout(() => {
+          btn.classList.remove('done');
+          if (label) label.textContent = original;
+        }, 1800);
+      } else {
+        showToast('النسخ التلقائي مش متاح، كلمة المرور: ' + password);
+      }
+    });
+  });
+
+  /* ---------- Telegram ---------- */
+  const telegramLink = $('#telegram-link');
+  if (telegramLink) {
+    if (TELEGRAM_URL) {
+      telegramLink.href = TELEGRAM_URL;
+      telegramLink.target = '_blank';
+      telegramLink.rel = 'noopener noreferrer';
+    } else {
+      telegramLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        showToast('رابط تيليجرام هيتضاف قريبًا. تواصل معي على واتساب دلوقتي.');
+      });
+    }
+  }
+
+  /* ---------- الأسئلة الشائعة (Accordion) ---------- */
+  const triggers = $$('.faq-trigger');
+
+  function setFaq(trigger, open) {
+    trigger.setAttribute('aria-expanded', String(open));
+    const item = trigger.closest('.faq-item');
+    if (item) item.classList.toggle('open', open);
+  }
+
+  triggers.forEach((trigger, index) => {
+    trigger.addEventListener('click', () => {
+      const willOpen = trigger.getAttribute('aria-expanded') !== 'true';
+      triggers.forEach((t) => setFaq(t, false));
+      setFaq(trigger, willOpen);
+    });
+
+    trigger.addEventListener('keydown', (e) => {
+      let next = null;
+      if (e.key === 'ArrowDown') next = triggers[(index + 1) % triggers.length];
+      else if (e.key === 'ArrowUp') next = triggers[(index - 1 + triggers.length) % triggers.length];
+      else if (e.key === 'Home') next = triggers[0];
+      else if (e.key === 'End') next = triggers[triggers.length - 1];
+      if (next) { e.preventDefault(); next.focus(); }
+    });
+  });
+
+  /* ---------- نموذج الرأي → واتساب ---------- */
+  const form = $('#feedback-form');
+  if (form) {
+    const nameInput = $('#fb-name');
+    const reviewInput = $('#fb-review');
+    const errorEl = $('#fb-error');
+    const statusEl = $('#fb-status');
+    const fallback = $('#fb-fallback');
+    const previewBtn = $('#preview-btn');
+    const previewBox = $('#preview');
+    const previewName = $('#preview-name');
+    const previewText = $('#preview-text');
+
+    const getValues = () => ({
+      name: nameInput.value.trim() || 'زائر',
+      review: reviewInput.value.trim()
+    });
+
+    function showError(message) {
+      errorEl.textContent = message;
+      errorEl.hidden = false;
+      reviewInput.setAttribute('aria-invalid', 'true');
+      reviewInput.focus();
+    }
+
+    function clearError() {
+      errorEl.hidden = true;
+      errorEl.textContent = '';
+      reviewInput.removeAttribute('aria-invalid');
+    }
+
+    function buildMessage({ name, review }) {
+      return (
+        'مرحبًا LoveCode ❤️\n\n' +
+        'عندي رأي بخصوص البورتفوليو.\n\n' +
+        `الاسم: ${name}\n\n` +
+        `الرأي:\n${review}\n\n` +
+        'تم إرسال هذا الرأي من نموذج البورتفوليو.'
+      );
+    }
+
+    reviewInput.addEventListener('input', () => {
+      if (reviewInput.value.trim()) clearError();
+    });
+
+    previewBtn.addEventListener('click', () => {
+      clearError();
+      const { name, review } = getValues();
+      if (!review) {
+        previewBox.hidden = true;
+        showError('اكتب رأيك الأول عشان أقدر أعرض المعاينة.');
+        return;
+      }
+      previewName.textContent = name;
+      previewText.textContent = review;
+      previewBox.hidden = false;
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      clearError();
+      statusEl.textContent = '';
+      statusEl.classList.remove('warn');
+      fallback.hidden = true;
+
+      const values = getValues();
+      if (!values.review) {
+        showError('اكتب رأيك الأول قبل الإرسال.');
+        return;
+      }
+
+      const url = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(buildMessage(values))}`;
+      fallback.href = url;
+
+      const win = window.open(url, '_blank');
+      if (win) {
+        try { win.opener = null; } catch (_) { /* تجاهل */ }
+        statusEl.textContent = 'اتفتحت محادثة واتساب برسالتك جاهزة. اضغط «إرسال» جوه واتساب عشان توصلني.';
+      } else {
+        statusEl.classList.add('warn');
+        statusEl.textContent = 'المتصفح منع فتح تبويب جديد. اضغط على الرابط اللي تحت لفتح واتساب.';
+        fallback.hidden = false;
+      }
+    });
+  }
+
+  /* ---------- صور المشاريع: الصورة لو موجودة، وإلا الرسم الافتراضي ---------- */
+  $$('.project-shot').forEach((img) => {
+    const art = img.closest('.project-art');
+    const ok = () => art && art.classList.add('has-shot');
+    const fail = () => { art && art.classList.remove('has-shot'); img.remove(); };
+    img.addEventListener('load', () => (img.naturalWidth > 0 ? ok() : fail()));
+    img.addEventListener('error', fail);
+    if (img.complete) (img.naturalWidth > 0 ? ok() : fail());
+  });
+
+  /* ---------- السنة في الفوتر ---------- */
+  const yearEl = $('#year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+})();
+
+</script>
+
+<!-- ========== موسيقى الخلفية ========== -->
+<audio id="bg-music" loop preload="auto" playsinline></audio>
+<button type="button" id="music-fallback"><span aria-hidden="true">🎵</span> شغّل الموسيقى</button>
+<script>
+(function () {
+  var audio = document.getElementById('bg-music');
+  var fallbackBtn = document.getElementById('music-fallback');
+  if (!audio) return;
+
+  // أسماء محتملة للملف (لو اتسمّى بحروف كبيرة أو الويندوز ضاف .mp3 مرتين)
+  var sources = ['song.mp3', 'Song.mp3', 'song.mp3.mp3', 'song.MP3'];
+  var i = 0, missing = false;
+  function loadNext() {
+    if (i >= sources.length) { missing = true; console.warn('ملف الموسيقى مش موجود: لازم يكون song.mp3 جنب index.html'); return; }
+    audio.src = sources[i++];
+    audio.load();
+  }
+  audio.addEventListener('error', loadNext);
+  loadNext();
+  audio.volume = 0.7;
+
+  // تشغيل الصوت: بترجع Promise بـ true لو نجح فعلًا، و false لو المتصفح رفض
+  function play() {
+    if (missing) return Promise.resolve(false);
+    try {
+      var p = audio.play();
+      if (p && p.then) {
+        return p.then(function () { return true; }).catch(function () { return false; });
+      }
+      return Promise.resolve(!audio.paused);
+    } catch (e) { return Promise.resolve(false); }
+  }
+
+  function showFallback(show) { if (fallbackBtn) fallbackBtn.classList.toggle('show', !!show); }
+
+  if (fallbackBtn) {
+    fallbackBtn.addEventListener('click', function () {
+      play().then(function (ok) { if (ok) showFallback(false); });
+    });
+  }
+
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden && !audio.paused) play();
+  });
+
+  window.LoveCodeMusic = {
+    play: play,
+    start: function () {
+      // لازم يتنادى مباشرة من ضغطة المستخدم
+      return play().then(function (ok) { showFallback(!ok && !missing); return ok; });
+    }
+  };
+})();
+</script>
+
+<!-- ========== سكريبت شاشة الدخول ========== -->
+<script>
+(function () {
+  var intro = document.getElementById('intro');
+  var btn = document.getElementById('intro-enter');
+  var root = document.documentElement;
+  if (!intro || !btn) { root.classList.remove('intro-open'); return; }
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var others = Array.prototype.filter.call(document.body.children, function (el) {
+    return el !== intro && !/^(SCRIPT|STYLE|SVG|AUDIO)$/i.test(el.tagName);
+  });
+  others.forEach(function (el) { el.setAttribute('inert', ''); });
+
+  // قلوب عايمة خفيفة في الخلفية
+  var box = document.getElementById('intro-hearts');
+  if (box && !reduce) {
+    var n = window.innerWidth < 600 ? 12 : 18;
+    for (var k = 0; k < n; k++) {
+      var h = document.createElement('span');
+      h.className = 'intro-heart';
+      h.style.left = (Math.random() * 96) + '%';
+      h.style.setProperty('--s', (14 + Math.random() * 22).toFixed(0) + 'px');
+      h.style.setProperty('--d', (11 + Math.random() * 10).toFixed(1) + 's');
+      h.style.setProperty('--delay', (-Math.random() * 14).toFixed(1) + 's');
+      h.style.setProperty('--x', ((Math.random() * 60) - 30).toFixed(0) + 'px');
+      box.appendChild(h);
+    }
+  }
+
+  var entered = false;
+  btn.addEventListener('click', function (e) {
+    if (entered) return;
+    entered = true;
+
+    // 1) تشغيل الموسيقى مباشرة من الضغطة (من غير ما نستنى النتيجة)
+    try {
+      if (window.LoveCodeMusic) window.LoveCodeMusic.start();
+    } catch (err) { /* الموقع يفتح عادي حتى لو الصوت فشل */ }
+
+    // تأثير الضغط (Ripple)
+    if (!reduce) {
+      var r = btn.getBoundingClientRect();
+      var size = Math.max(r.width, r.height) * 2;
+      var rp = document.createElement('span');
+      rp.className = 'ripple';
+      rp.style.width = rp.style.height = size + 'px';
+      rp.style.left = ((e.clientX || r.left + r.width / 2) - r.left - size / 2) + 'px';
+      rp.style.top = ((e.clientY || r.top + r.height / 2) - r.top - size / 2) + 'px';
+      btn.appendChild(rp);
+    }
+
+    // 2 + 3) اختفاء الشاشة بنعومة وظهور الموقع تدريجيًا
+    others.forEach(function (el) { el.removeAttribute('inert'); });
+    root.classList.add('intro-leaving');
+    root.classList.remove('intro-open');
+    intro.classList.add('leaving');
+    intro.setAttribute('aria-hidden', 'true');
+
+    setTimeout(function () {
+      intro.style.display = 'none';
+      root.classList.remove('intro-leaving');
+      if (intro.parentNode) intro.parentNode.removeChild(intro);
+    }, reduce ? 0 : 800);
+  });
+
+  try { btn.focus({ preventScroll: true }); } catch (e) { btn.focus(); }
+})();
+</script>
+</body>
+</html>
